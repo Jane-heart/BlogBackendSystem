@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="online.tuanzi.mapper.BlogMapper">
+
+    <resultMap id="BaseResultMap" type="online.tuanzi.model.entity.Blog">
+            <id property="blogId" column="blog_id" jdbcType="INTEGER"/>
+            <result property="authorId" column="author_id" jdbcType="INTEGER"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="imageLink" column="image_link" jdbcType="VARCHAR"/>
+            <result property="publishTime" column="publish_time" jdbcType="TIMESTAMP"/>
+            <result property="classification" column="classification" jdbcType="VARCHAR"/>
+            <result property="permission" column="permission" jdbcType="TINYINT"/>
+            <result property="blogStatusCode" column="blog_status_code" jdbcType="TINYINT"/>
+            <result property="reason" column="reason" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        blog_id,author_id,title,
+        description,image_link,publish_time,
+        classification,permission,blog_status_code,
+        reason,content
+    </sql>
+</mapper>
